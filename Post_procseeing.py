@@ -10,8 +10,8 @@ import os
 new_path='/home/vivek/Desktop/twitter_nlp-master/Cleaned_NER'
 for root, dirs, files in os.walk('/home/vivek/Desktop/twitter_nlp-master/Ner'):
     for file in files:
-        with open(os.path.join(root,file),'r') as tweets_file:
-            tweets_new_file = open(os.path.join(new_path, file), "w")
+        with open(os.path.join(root,'travel_new8.txt'),'r') as tweets_file:
+            tweets_new_file = open(os.path.join(new_path,'travel_new8.txt'), "w")
             for line in tweets_file:
                 if 'geo-loc' in line or 'facility' in line:
                     clean_line1 = re.sub('(\/O)', '', line)
